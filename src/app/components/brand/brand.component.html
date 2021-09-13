@@ -1,0 +1,25 @@
+
+<div class="container">          
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th hidden>Brand ID </th> 
+          <th>Brand Name</th>
+          <th>Brand Description</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let brand of brands">
+            <td hidden>{{brand.BrandID}} ng-hide="!show"</td>
+            <td>{{brand.BrandName}}</td>
+            <td>{{brand.BrandDescription}}</td>
+            <td><button type="button" class="btn btn-xs btn-primary"(click)="updateBrand(brand)">Edit</button>&nbsp;
+                <button type="button" class="btn btn-xs btn-danger" (click)="deleteBrand(brand)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+        <button type="button" class="btn btn btn-primary" (click)="addNew()">Add New</button>    
+    </div>
+  </div>
